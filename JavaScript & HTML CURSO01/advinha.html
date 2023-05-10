@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+	<script>
+
+		function pularLinha() {
+
+			document.write("<br><br>");
+		};
+
+		function mostra(frase) {
+
+			document.write(frase);
+			pularLinha();
+		};
+
+		function sorteio(n) {
+			
+			return Math.round(Math.random() * n);
+		}
+
+		var numeroPensado = sorteio(10);
+		console.log(numeroPensado);
+
+		var tentativas = 1;
+
+		while(tentativas <= 3) {
+			var chute = parseInt(prompt("Em qual número estou pensando? "));
+
+		if ( numeroPensado == chute) {
+
+			mostra("Você acertou! Muito bem! o número que pensei foi  " + numeroPensado);
+			break
+		} else {
+			if (numeroPensado < chute) {
+				
+				mostra("Você errou o numero Pensado é menor que " + chute);
+			} else {
+				mostra("Você errou o número pensado é maior que " + chute);
+			}
+			tentativas++;
+			}
+		}
+
+		mostra("FIM");
+
+</script>

@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+<script>
+		function pularLinha() {
+		document.write("<br.<br>");
+
+		};
+
+		function mostra(frase) {
+
+		document.write(frase);
+		pularLinha();
+
+		};
+
+		function sorteia(n) {
+
+		Math.round(Math.random() * n );
+
+		};
+
+		var numeroPensado = sorteia();
+		
+		var chute = parseInt(prompt("Já pensei em um número, qual é ? "));
+
+		if(chute == numeroPensado) {
+
+		mostra("Uau! você acertou, pois o número que pensei é" + numeroPensado);
+
+		} else {
+
+		var contador = 1;
+
+		while( contador <= 10) {
+
+		alert("Já era, você errou!");
+		contador = contador +1
+
+			};
+		};
+	</script>
